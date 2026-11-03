@@ -1,0 +1,8 @@
+pillow
+numpy
+opencv-python
+ultralytics
+easyocr
+pandas
+matplotlib
+pytest

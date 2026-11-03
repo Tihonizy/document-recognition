@@ -1,0 +1,19 @@
+# Generated datasets, training runs and model weights
+data/
+runs/
+weights/
+*.pt
+*.pth
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# OS and editors
+.DS_Store
+.vscode/
+.idea/
