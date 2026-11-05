@@ -26,7 +26,7 @@ def make_photo(size: tuple[int, int]):
     photo = Image.new("RGB", size, (200, 200, 205))
     draw = ImageDraw.Draw(photo)
 
-    draw.ellipse((0.3, * w, 0.15 * h, 0.7 * w, 0.5 * h), fill=(110, 110, 120))
+    draw.ellipse((0.3 * w, 0.15 * h, 0.7 * w, 0.5 * h), fill=(110, 110, 120))
     draw.ellipse((0.1 * w, 0.55 * h, 0.9 * w, 1.2 * h), fill=(110, 110, 120))
 
     return photo 
@@ -44,7 +44,7 @@ def render_card(person: dict, t: dict = TEMPLATE):
     draw.text((40, 40), t["title"], font=title_font, fill="white", anchor="lm")
 
     x0, y0, x1, y1 = t["photo"]
-    card.paste(make_photo((x1 - x0), (y1 - y0)), (x0, y0))
+    card.paste(make_photo((x1 - x0, y1 - y0)), (x0, y0))
     fields = [{"cls": "photo", "box": t["photo"], "text": None}]
 
     for name, (label, x, y) in t["fields"].items():
@@ -53,7 +53,7 @@ def render_card(person: dict, t: dict = TEMPLATE):
     fields = [{"cls": "photo", "box": t["photo"], "text": None}]
 
     for name, (label, x, y) in t["fields"].items():
-        
+
         draw.text((x, y), label, font=label_font, fill=(90, 90, 90))
         value = person[name]
         draw.text((x, y + 24), value, font=value_font, fill=(20, 20, 20))
