@@ -11,6 +11,7 @@ TEMPLATE = {
     "title": "УДОСТОВЕРЕНИЕ ЛИЧНОСТИ · ОБРАЗЕЦ",
     "photo": (40, 120, 260, 400),
     "fields": {
+        "surname": ("Фамилия", 300, 110),
         "name": ("Имя", 300, 185),
         "patronymic": ("Отчество", 300, 260),
         "birth_date": ("Дата рождения", 300, 335),
@@ -45,11 +46,6 @@ def render_card(person: dict, t: dict = TEMPLATE):
 
     x0, y0, x1, y1 = t["photo"]
     card.paste(make_photo((x1 - x0, y1 - y0)), (x0, y0))
-    fields = [{"cls": "photo", "box": t["photo"], "text": None}]
-
-    for name, (label, x, y) in t["fields"].items():
-
-        card.paste(make_photo((x1 - x0, y1 - y0)), (x0, y0))
     fields = [{"cls": "photo", "box": t["photo"], "text": None}]
 
     for name, (label, x, y) in t["fields"].items():

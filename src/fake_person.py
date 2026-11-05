@@ -27,7 +27,7 @@ def random_person(rng: random.Random):
     days = (date(2008, 12, 31) - first).days
     birth = first + timedelta(days=rng.randrange(days))
     return {
-        "surname": surname if male else surname + "a",
+        "surname": surname if male else surname + "а",
         "name": rng.choice(MALE_NAMES if male else FEMALE_NAMES),
         "patronymic": patronymic[0] if male else patronymic[1],
         "birth_date": birth.strftime("%d.%m.%Y"),
