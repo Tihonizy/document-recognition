@@ -1,3 +1,4 @@
+"""Рисует синтетическую ID-карту по шаблону и возвращает точную рамку каждого поля."""
 from pathlib import Path                       
 from PIL import Image, ImageDraw, ImageFont    
 

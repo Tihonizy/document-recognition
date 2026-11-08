@@ -1,3 +1,4 @@
+"""Придумывает случайных вымышленных людей: ФИО, дату рождения и номер документа."""
 import random 
 from datetime import date, timedelta
 

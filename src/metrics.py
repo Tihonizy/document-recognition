@@ -1,3 +1,4 @@
+"""Метрики качества OCR: расстояние Левенштейна и доля ошибок в символах (CER)."""
 def levenshtein(a, b):             
     prev = list(range(len(b) + 1))        
     for i, ca in enumerate(a, 1):           

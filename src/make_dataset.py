@@ -1,3 +1,4 @@
+"""Генерирует датасет в формате YOLO: картинки, разметку и правильные тексты полей."""
 import json                               
 import random                               
 from pathlib import Path                    
